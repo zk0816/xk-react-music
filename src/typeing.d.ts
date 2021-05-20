@@ -1,0 +1,11 @@
+declare module "*.less";
+declare module "*.css";
+declare module "react-router-dom";
+declare module "react-router-config";
+declare module "*.svg";
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.jpeg";
+declare module "*.gif";
+declare module "*.bmp";
+declare module "*.tiff";
