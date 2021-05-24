@@ -37,6 +37,23 @@ module.exports = merge(common, {
             loader: "less-loader",
           },
         ],
+        exclude: path.resolve(__dirname, "../src/app.less"),
+      },
+      {
+        test: /\.less$/i,
+        use: ["style-loader", {
+          loader: "css-loader",
+        },
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                javascriptEnabled: true
+              },
+            },
+          },
+        ],
+        include: path.resolve(__dirname, "../src/app.less"),
       },
       {
         test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,

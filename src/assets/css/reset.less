@@ -1,6 +1,7 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 
 /* 样式的重置 */
+
 body,
 html,
 h1,
@@ -23,8 +24,11 @@ input,
 td,
 th,
 ins {
+  //后期优化重置
+  margin: -22px 0 0 0;
   padding: 0;
-  margin: 0;
+  overflow: hidden;
+  min-width: 982px;
 }
 
 ul,
@@ -68,6 +72,7 @@ img {
 }
 
 /* 全局样式 */
+
 body,
 textarea,
 select,

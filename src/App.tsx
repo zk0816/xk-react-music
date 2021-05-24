@@ -5,6 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import MusicHeader from '@/components/MusicHeader';
 import MusicFooter from '@/components/MusicFooter';
 import routes from '@/router';
+import "./app.less";
+
+
 
 const App = () => {
   return (

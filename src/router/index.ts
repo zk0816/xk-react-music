@@ -5,6 +5,11 @@ import Mine from "@/pages/Mine";
 import Friend from "@/pages/Friend";
 
 const routes = [
+  // {
+  //   path: '/',
+  //   redirect: '/discover',
+  //   component: Discover
+  // },
   {
     path: "/discover",
     component: Discover
