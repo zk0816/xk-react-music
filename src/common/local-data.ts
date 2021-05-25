@@ -70,3 +70,30 @@ export const footerImages = [
     link: "https://music.163.com/uservideo#/plan",
   }
 ]
+
+export const dicoverMenu = [
+  {
+    title: "推荐",
+    link: "/Discover/subpages/Recommend"
+  },
+  {
+    title: "排行榜",
+    link: "/Discover/subpages/Ranking"
+  },
+  {
+    title: "歌单",
+    link: "/Discover/subpages/Songs"
+  },
+  {
+    title: "主播电台",
+    link: "/Discover/subpages/Djradio"
+  },
+  {
+    title: "歌手",
+    link: "/Discover/subpages/Artist"
+  },
+  {
+    title: "新碟上架",
+    link: "/Discover/subpages/Album"
+  },
+]
