@@ -33,9 +33,9 @@ const MusicHeader = () => {
     }
   };
   return (
-    <div>
+    <div className={style.header}>
       <div className={style.m_top}>
-        <div style={{ display: "flex", marginRight: 80 }}>
+        <div style={{ display: "flex", marginRight: 85 }}>
           <div>
             <NavLink to="/discover" className={style.top_img}></NavLink>
           </div>
@@ -47,9 +47,13 @@ const MusicHeader = () => {
           </div>
         </div>
         <div className={style.m_right}>
-          <Input className={style.search} placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined />} />
+          <Input
+            className={style.search}
+            placeholder="音乐/视频/电台/用户"
+            prefix={<SearchOutlined />}
+          />
           <div className={style.center}>创作者中心</div>
-          <div className="">登录</div>
+          <div style={{cursor: 'pointer'}}>登录</div>
         </div>
       </div>
       <div style={{ height: 5, backgroundColor: "#C20C0C" }}></div>
