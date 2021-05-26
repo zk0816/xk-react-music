@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import { NavLink,Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as Data from '@/common/local-data';
 import style from "./index.less";
 
@@ -43,7 +43,6 @@ const MusicHeader = () => {
             {Data.HeaderLinks.map((item, index) => {
               return <div key={item.title}>{showItem(item, index)}</div>;
             })}
-            <Redirect from="/" to="/discover"></Redirect>
           </div>
         </div>
         <div className={style.m_right}>

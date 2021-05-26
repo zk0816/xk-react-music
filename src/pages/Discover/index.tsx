@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { NavLink } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
 import { dicoverMenu } from "@/common/local-data";
@@ -8,12 +8,14 @@ const RMDiscover: React.FC = (props:any) => {
   const { route } = props;
   return (
     <div className={style.header}>
-      <div className="top">
-        <div className="wrap-v1" style={{display: 'flex'}}>
-          {dicoverMenu.map((item, index) => {
+      <div>
+        <div className={style.title}>
+          {dicoverMenu.map((item) => {
             return (
-              <div className="item" key={item.title}>
-                <NavLink to={item.link}>{item.title}</NavLink>
+              <div className={style.item} key={item.title}>
+                <NavLink to={item.link} activeClassName={style.menu_active}>
+                  {item.title}
+                </NavLink>
               </div>
             );
           })}
@@ -24,4 +26,4 @@ const RMDiscover: React.FC = (props:any) => {
   );
 };
 
-export default RMDiscover;
+export default memo(RMDiscover);

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { renderRoutes } from 'react-router-config';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 
 import MusicHeader from '@/components/MusicHeader';
 import MusicFooter from '@/components/MusicFooter';
@@ -11,11 +11,11 @@ import "./app.less";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <MusicHeader />
       {renderRoutes(routes)}
       <MusicFooter />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
