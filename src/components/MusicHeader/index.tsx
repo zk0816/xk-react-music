@@ -55,7 +55,7 @@ const MusicHeader = () => {
           <div style={{cursor: 'pointer'}}>登录</div>
         </div>
       </div>
-      <div style={{ height: 5, backgroundColor: "#C20C0C" }}></div>
+      {/* <div style={{ height: 5, backgroundColor: "#C20C0C" }}></div> */}
     </div>
   );
 };

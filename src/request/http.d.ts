@@ -9,8 +9,6 @@ declare namespace http {
 
   interface Response<T> {
     readonly code: number;
-    readonly success: boolean;
-    readonly result: string;
     readonly data?: T;
   }
 

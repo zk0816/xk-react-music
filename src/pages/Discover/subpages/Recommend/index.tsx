@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
-import * as API from './api';
+import React from 'react';
+import Carousel from './components/Carousel';
 
 const Recommend: React.FC = () => {
-
-  useEffect(() =>{
-    API.GetCarouselList(0).then(res=>{
-      console.log('res',res)
-    })
-  },[])
   return (
     <div>
-      <div>Recommend</div>
+      <Carousel />
     </div>
   );
 };

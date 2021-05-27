@@ -2,6 +2,9 @@ module.exports = {
   extends: "stylelint-config-standard",
   rules: {
     // your rules
+    "selector-pseudo-class-no-unknown": [ true, {
+      ignorePseudoClasses: ["global"],
+    } ],
     "rule-empty-line-before": [
           "always-multi-line",
           {

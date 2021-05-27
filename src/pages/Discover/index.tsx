@@ -7,21 +7,23 @@ import style from './index.less';
 const RMDiscover: React.FC = (props:any) => {
   const { route } = props;
   return (
-    <div className={style.header}>
-      <div>
-        <div className={style.title}>
-          {dicoverMenu.map((item) => {
-            return (
-              <div className={style.item} key={item.title}>
-                <NavLink to={item.link} activeClassName={style.menu_active}>
-                  {item.title}
-                </NavLink>
-              </div>
-            );
-          })}
+    <div style={{height: '100%'}}>
+      <div className={style.header}>
+        <div>
+          <div className={style.title}>
+            {dicoverMenu.map((item) => {
+              return (
+                <div className={style.item} key={item.title}>
+                  <NavLink to={item.link} activeClassName={style.menu_active}>
+                    {item.title}
+                  </NavLink>
+                </div>
+              );
+            })}
+          </div>
         </div>
+        {renderRoutes(route.routes)}
       </div>
-      {renderRoutes(route.routes)}
     </div>
   );
 };
