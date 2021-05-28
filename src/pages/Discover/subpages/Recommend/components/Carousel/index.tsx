@@ -7,15 +7,19 @@ import style from './index.less';
 const CarouselList: React.FC = () => {
   const { data:banners } = useInitial(API.GetCarouselList, [], 0, "banners");
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const bannerRef = useRef<any>();
-  console.log('dsadada', bannerRef,currentIndex)
-  const bannerChange = useCallback((from, to) => {
-    setTimeout(() => {
-      setCurrentIndex(from);
-    }, 0);
+  const bannerChange = useCallback((from,to) => {
+      setCurrentIndex(to);
   }, []);
+
+  //高斯背景图模糊
+  const bgImage = banners[currentIndex] && (banners[currentIndex].imageUrl + "?imageView&blur=40x20")
+  const bkStyle = {
+    background: `url(${bgImage}) center center/6000px`
+  }
   return (
-    <div>
+    <div style={bkStyle}>
       <div className={style.banner}>
         <div className={style.left_top}>
           <div
@@ -24,7 +28,12 @@ const CarouselList: React.FC = () => {
           ></div>
         </div>
         <div className={style.banner_top}>
-          <Carousel autoplay beforeChange={bannerChange} ref={bannerRef}>
+          <Carousel
+            autoplay
+            beforeChange={bannerChange}
+            ref={bannerRef}
+            effect="fade"
+          >
             {banners.map((item: any) => {
               return (
                 <div className={style.banner_item} key={item.imageUrl}>

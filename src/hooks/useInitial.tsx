@@ -22,7 +22,7 @@ interface InitialStatus<P, T> {
 }
 
 //备注 由于网易云api文档没有返回数据类型 因此在使用useInitial可以不用限制类型 此hooks只是一个规范
-function useInitial<T, P>(api: APIFunc<T, P>, defaultData:T, params:P,apiName:string,delay?:boolean) {
+function useInitial<T, P>(api: APIFunc<T, P>, defaultData:T, params:P,apiName?:string,delay?:boolean) {
   //初始化参数并设置默认
   const [state, setState] = useState<InitialStatus<P,T>>({
     param: params, // param 请求参数
@@ -38,7 +38,7 @@ function useInitial<T, P>(api: APIFunc<T, P>, defaultData:T, params:P,apiName:st
     const getData = (params: P) => {
       api(params)
         .then((res: any) => {
-          const data = res[apiName];
+          const data = apiName ? res[apiName] : res.result;
           setState({
             ...state,
             data: data,
