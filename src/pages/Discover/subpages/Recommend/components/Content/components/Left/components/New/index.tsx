@@ -12,8 +12,8 @@ const New: React.FC = () => {
     <div>
       <RecommendHeader left="新碟上架" />
       <div className={style.top}>
-        <Carousel style={{ width: 700, height: 200 }} dots={false} autoplay>
-          <div style={{ margin: "auto" }}>
+        <Carousel className={style.carou} dots={false} style={{width:685}}>
+          <div>
             <div className={style.imglist}>
               {data.slice(0, 5).map((item: any) => (
                 <MV
@@ -25,7 +25,7 @@ const New: React.FC = () => {
               ))}
             </div>
           </div>
-          <div style={{ margin: "auto" }}>
+          <div>
             <div className={style.imglist}>
               {data.slice(5, 10).map((item: any) => (
                 <MV
