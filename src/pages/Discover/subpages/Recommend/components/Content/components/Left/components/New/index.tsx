@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import RecommendHeader from "@/components/common/RecommendHeader";
 import useInitial from '@/hooks/useInitial';
 import * as API from '@/pages/Discover/subpages/Recommend/api';
@@ -8,11 +8,23 @@ import { Carousel } from 'antd';
 
 const New: React.FC = () => {
   const { data } = useInitial(API.GetNewest, [], "", "albums");
+
+  const newRef = useRef<any>();
   return (
     <div>
       <RecommendHeader left="新碟上架" />
       <div className={style.top}>
-        <Carousel className={style.carou} dots={false} style={{width:685}}>
+        <div className={style.left}>
+          <a onClick={() => newRef.current.prev()}></a>
+        </div>
+        <Carousel
+          className={style.carou}
+          dots={false}
+          style={{ width: 645 }}
+          autoplay
+          ref={newRef}
+          effect="scrollx"
+        >
           <div>
             <div className={style.imglist}>
               {data.slice(0, 5).map((item: any) => (
@@ -38,6 +50,9 @@ const New: React.FC = () => {
             </div>
           </div>
         </Carousel>
+        <div className={style.right}>
+          <a onClick={() => newRef.current.next()}></a>
+        </div>
       </div>
     </div>
   );
