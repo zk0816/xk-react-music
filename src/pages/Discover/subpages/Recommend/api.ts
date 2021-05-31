@@ -16,3 +16,8 @@ export function GetPersonalized (limit?:number):P<any> {
 export function GetNewest ():P<any> {
   return request.get('/api/album/newest')
 }
+
+//3个榜单
+export function GetList (id:number):P<any> {
+  return request.get(`/api/playlist/detail?id=${id}`)
+}

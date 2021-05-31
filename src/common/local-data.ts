@@ -97,3 +97,10 @@ export const dicoverMenu = [
     link: "/discover/album"
   },
 ]
+
+//榜单图片地址
+export const Img = [
+  'http://p3.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100',
+  "http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100",
+  'http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100'
+]
