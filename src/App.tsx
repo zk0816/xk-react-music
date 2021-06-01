@@ -4,6 +4,7 @@ import { HashRouter } from "react-router-dom";
 
 import MusicHeader from '@/components/MusicHeader';
 import MusicFooter from '@/components/MusicFooter';
+import AppPlay from '@/components/AppPlay';
 import routes from '@/router';
 import "./app.less";
 
@@ -14,6 +15,7 @@ const App = () => {
     <HashRouter>
       <MusicHeader />
       {renderRoutes(routes)}
+      <AppPlay />
       <MusicFooter />
     </HashRouter>
   );
