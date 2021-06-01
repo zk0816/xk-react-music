@@ -7,9 +7,9 @@ import style from './index.less';
 const RMDiscover: React.FC = (props:any) => {
   const { route } = props;
   return (
-    <div style={{height: '100%'}}>
+    <div style={{ height: "100%" }}>
       <div className={style.header}>
-        <div>
+        <div className={style.color}>
           <div className={style.title}>
             {dicoverMenu.map((item) => {
               return (

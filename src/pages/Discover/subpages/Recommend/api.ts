@@ -21,3 +21,19 @@ export function GetNewest ():P<any> {
 export function GetList (id:number):P<any> {
   return request.get(`/api/playlist/detail?id=${id}`)
 }
+
+//入驻歌手
+interface SingerProps {
+  limit?: number, //返回个数
+  type?: number,  //类型
+  area?: number,  //地区
+  initial?: string, //按字母查询
+}
+export function GetHotSinger (props:SingerProps):P<any> {
+  return request.get(`/api/artist/list?limit=${props.limit}`)
+}
+
+//热门主播
+export function GetHotAnchor (limit:number):P<any> {
+  return request.get(`/api/dj/toplist/popular?limit=${limit}`)
+}
