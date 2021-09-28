@@ -1,3 +1,4 @@
+//发现音乐 -- 推荐 -- 轮播图下面组件 -- 左边内容组件 -- 热门推荐
 import React from "react";
 import RecommendHeader from "@/components/common/RecommendHeader";
 import useInitial from '@/hooks/useInitial';

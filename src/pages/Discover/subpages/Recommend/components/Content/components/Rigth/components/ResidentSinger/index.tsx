@@ -1,3 +1,4 @@
+//发现音乐 -- 推荐 -- 轮播图下面 -- 右边内容 -- 入驻歌手
 import React from 'react';
 import style from './index.less';
 import Singer from'./components/Singer';

@@ -1,3 +1,4 @@
+//首页的推荐页面的新碟上架通用歌曲组件
 import React from 'react';
 import * as TYPE from './type';
 import style from './index.less';

@@ -1,3 +1,4 @@
+//首页的推荐页面的榜单通用组件 飙升榜组件
 import React from 'react';
 import style from './index.less';
 

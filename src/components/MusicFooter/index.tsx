@@ -1,3 +1,4 @@
+//首页尾部
 import React, { Fragment, memo } from "react";
 import { footerLinks, footerImages } from "@/common/local-data";
 import style from "./index.less";

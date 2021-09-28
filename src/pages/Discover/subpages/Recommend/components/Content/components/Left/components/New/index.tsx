@@ -1,3 +1,4 @@
+//发现音乐 -- 推荐 -- 轮播图下面组件 -- 左边内容组件 -- 新碟上架
 import React, {useRef} from "react";
 import RecommendHeader from "@/components/common/RecommendHeader";
 import useInitial from '@/hooks/useInitial';

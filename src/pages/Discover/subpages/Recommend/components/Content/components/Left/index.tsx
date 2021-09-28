@@ -1,3 +1,4 @@
+//发现音乐 -- 推荐 -- 轮播图下面组件 -- 左边内容组件
 import React from "react";
 import style from './index.less';
 import Hot from './components/Hot';

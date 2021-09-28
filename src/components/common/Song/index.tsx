@@ -1,3 +1,4 @@
+//首页的推荐页面的热门推荐的单个歌曲组件
 import React from 'react';
 import style from './index.less';
 import {getCount} from '@/utils/format_utils';
